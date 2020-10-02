@@ -6,8 +6,10 @@ import by.studentstorage.domain.User;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InMemoryUserStorage implements UserStorage {
+public class
+InMemoryUserStorage implements UserStorage {
     private List<User> users = new ArrayList<>();
+
     @Override
     public boolean save(User user) {
         if (users.add(user)) {
@@ -18,6 +20,7 @@ public class InMemoryUserStorage implements UserStorage {
 
     @Override
     public User remove(long id) {
+//        InMemoryTeacherStorage inMemoryTeacherStorage = new InMemoryTeacherStorage();
         User user = null;
         for (int i = 0; i < users.size(); i++) {
             if (users.get(i).getId() == id){

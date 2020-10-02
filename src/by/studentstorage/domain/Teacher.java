@@ -21,7 +21,7 @@ public class Teacher extends User{
         this.department = department;
     }
 
-    public Teacher() {
+    public Teacher(Position senior, Rank docent) {
     }
 
     public Rank getRank() {
